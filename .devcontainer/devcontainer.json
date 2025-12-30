@@ -1,0 +1,19 @@
+{
+    "name": "Doris Docker Environment",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "remoteEnv": {
+        "DOCKER_BUILDKIT": "1"
+    }
+}
