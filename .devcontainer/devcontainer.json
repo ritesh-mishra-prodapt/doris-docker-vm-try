@@ -1,6 +1,6 @@
 {
-    "name": "Doris Docker Environment",
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "name": "Doris-Docker-Env",
+    "image": "mcr.microsoft.com/devcontainers/base:jammy", 
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:1": {
             "version": "latest"
@@ -13,7 +13,5 @@
             ]
         }
     },
-    "remoteEnv": {
-        "DOCKER_BUILDKIT": "1"
-    }
+    "postCreateCommand": "sudo sysctl -w vm.max_map_count=2000000"
 }
